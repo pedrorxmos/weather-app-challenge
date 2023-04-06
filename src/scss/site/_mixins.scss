@@ -1,0 +1,11 @@
+@mixin d-flex($direction: column, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin mq($direction: min-width, $size: 1024px) {
+  @media scree and ($direction: $size) {
+    @content;
+  }
+}
