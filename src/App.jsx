@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AsideComponent, HomeComponent } from './components'
-import './css/style.css'
+import './scss/style.scss'
 
 function App() {
 
