@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import { AsideComponent, HomeComponent } from './components'
+
 import './scss/style.scss'
+import { Aside, Home } from './views'
 
 function App() {
 
 
   return (
     <>
-      <HomeComponent/>
-      <AsideComponent/>
+      <main>
+        <Home/>
+        <Aside/>
+      </main>
     </>
   )
 }
