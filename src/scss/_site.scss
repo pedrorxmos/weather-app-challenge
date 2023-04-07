@@ -5,4 +5,10 @@
 body {
   background-color: pink;
   font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+main {
+  @include d-flex(column, 0);
+  width: 100%;
 }

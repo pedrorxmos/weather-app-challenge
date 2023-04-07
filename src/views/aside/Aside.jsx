@@ -1,7 +1,7 @@
 export function Aside() {
   return(
     <>
-      Aside.jsx
+      <p>Aside.jsx</p>
     </>
   )
 }

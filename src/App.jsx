@@ -1,5 +1,3 @@
-
-import './scss/style.scss'
 import { Aside, Home } from './views'
 
 function App() {
