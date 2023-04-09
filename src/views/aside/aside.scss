@@ -10,10 +10,10 @@
 
   .aside__highlitghts {
     padding: 0 $pd-sm $pd-xl;
-    @include d-flex(column, 1rem);
+    @include d-flex(column, 2rem);
 
     .hl-list {
-      @include d-flex(column, 1rem);
+      @include d-flex(column, 2rem);
     }
   }
 }

@@ -16,7 +16,12 @@ export function Highlights({type, value, measure, res}) {
         </div>
       }
       {type === 'Humidity' &&
-        <div className="prct-bar">prct-bar {value}</div>
+        <div className="prct">
+          <div className="prct__num">
+            <span>0%</span><span>50%</span><span>100%</span>
+          </div>
+          <div className="prct__bar" style={{'--prct-value': value + '%'}}></div>
+        </div>
       }
     </div>
   )
