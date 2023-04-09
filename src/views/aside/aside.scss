@@ -1,0 +1,19 @@
+@import '../../scss/exports';
+
+.aside {
+  .aside__week {
+    padding: $pd-xl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  .aside__highlitghts {
+    padding: 0 $pd-sm $pd-xl;
+    @include d-flex(column, 2rem);
+
+    .hl-list {
+      @include d-flex(column, 2rem);
+    }
+  }
+}

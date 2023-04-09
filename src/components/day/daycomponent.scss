@@ -1,0 +1,33 @@
+@import '../../scss/exports';
+
+.day-card {
+  background-color: $blue;
+  padding: 15px 0;
+  @include d-flex(column, 2rem);
+  justify-content: center;
+  align-items: center;
+
+  .day__group{
+    @include d-flex(column, 10px);
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 56px;
+      height: auto;
+    }
+  }
+
+  .day__maxmin {
+    @include d-flex(row, 0);
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 18px;
+
+    p:last-child {
+      color: $light-grey;
+    }
+  }
+
+  
+}
