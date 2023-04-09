@@ -1,0 +1,22 @@
+@import '../../scss/exports';
+
+.hl-card {
+  background-color: $blue;
+  padding: 22px $pd-xs $pd-m;
+  @include d-flex(column, 1rem);
+  justify-content: center;
+  align-items: center;
+
+  .hl__group {
+    @include d-flex(column, 10px);
+    align-items: center;
+    
+    .hl-value {
+      font-size: 64px;
+
+      span {
+        font-size:36px;
+      }
+    }
+  }
+}

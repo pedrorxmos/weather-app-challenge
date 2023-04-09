@@ -9,7 +9,11 @@
   }
 
   .aside__highlitghts {
-    padding: 0 $pd-sm;
+    padding: 0 $pd-sm $pd-xl;
     @include d-flex(column, 1rem);
+
+    .hl-list {
+      @include d-flex(column, 1rem);
+    }
   }
 }
