@@ -1,0 +1,28 @@
+@import '../../scss/exports';
+
+.banner { 
+  @include d-flex();
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / .875;
+  position: relative;
+
+  &:before {
+    content: "";
+    background-image: url('../../assets/img/Cloud-background.webp');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+  }
+
+  img {
+    width: 35vw;
+    height: auto;
+  }
+}

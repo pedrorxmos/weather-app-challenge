@@ -1,5 +1,6 @@
 import './home.scss';
 import { LocationSVG } from '../../assets/icons';
+import { Banner } from '../../components/home/Banner';
 
 export function Home() {
   return(
@@ -13,6 +14,9 @@ export function Home() {
           <LocationSVG/>
         </button>
       </nav>
+      <div className="home__banner">
+        <Banner/>
+      </div>
     </header>
   )
 }
