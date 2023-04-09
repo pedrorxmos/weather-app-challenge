@@ -14,9 +14,7 @@ export function Home() {
           <LocationSVG/>
         </button>
       </nav>
-      <div className="home__banner">
-        <Banner/>
-      </div>
+      <Banner type={"Thunderstorm"}/>
     </header>
   )
 }
