@@ -25,6 +25,22 @@
       span {
         font-size: 48px;
         line-height: 56.35px;
+        color: $light-grey;
+      }
+    }
+
+    .info-type {
+      color: $light-grey;
+      font-size: 36px;
+    }
+
+    .info-date {
+      @include d-flex(row, 1rem);
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
         color: $grey;
       }
     }

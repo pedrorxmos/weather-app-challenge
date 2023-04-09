@@ -20,7 +20,7 @@ export function Home() {
         <p className="info-type">Thunderstorm</p>
         <div className="info-date">
           <p>Today</p>
-          <span></span>
+          <span class="dot"></span>
           <p>Fri. 5 Jun</p>
         </div>
         <div className="info-city">
