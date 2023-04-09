@@ -1,4 +1,5 @@
 import { DayComponent } from '../../components/day/DayComponent';
+import { Highlights } from '../../components/highlights/Highlights';
 import './aside.scss';
 
 export function Aside() {
@@ -33,7 +34,7 @@ export function Aside() {
       max: 16,
       min: 11
     }
-  ]
+  ];
 
   return(
     <main className="aside">
@@ -43,7 +44,15 @@ export function Aside() {
         ))}
         
       </div>
-      <h2 className='h1'>Aside</h2>
+      <div className="aside__highlitghts">
+        <h2>Today's Highlights</h2>
+        <div className="hl-list">
+          <Highlights type="Wind Status" value={7} measure="mph" res="wsw"/>
+          <Highlights type="Humidity" value={84} measure="%"/>
+          <Highlights type="Visibility" value={6.4} measure="miles"/>
+          <Highlights type="Air Pressure" value={998} measure="mb"/>
+        </div>
+      </div>
     </main>
   )
 }

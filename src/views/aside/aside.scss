@@ -1,11 +1,15 @@
 @import '../../scss/exports';
 
 .aside {
-  padding: $pd-xl;
-
   .aside__week {
+    padding: $pd-xl;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
+  }
+
+  .aside__highlitghts {
+    padding: 0 $pd-sm;
+    @include d-flex(column, 1rem);
   }
 }
