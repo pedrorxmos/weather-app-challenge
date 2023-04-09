@@ -47,7 +47,7 @@ export function Aside() {
       <div className="aside__highlitghts">
         <h2>Today's Highlights</h2>
         <div className="hl-list">
-          <Highlights type="Wind Status" value={7} measure="mph" res="wsw"/>
+          <Highlights type="Wind Status" value={7} measure="mph" res={['E', 95]}/>
           <Highlights type="Humidity" value={84} measure="%"/>
           <Highlights type="Visibility" value={6.4} measure="miles"/>
           <Highlights type="Air Pressure" value={998} measure="mb"/>

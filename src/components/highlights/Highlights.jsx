@@ -1,3 +1,4 @@
+import { DirectionSVG } from '../../assets/icons';
 import './highlights.scss';
 
 export function Highlights({type, value, measure, res}) {
@@ -9,7 +10,10 @@ export function Highlights({type, value, measure, res}) {
         <p className="hl-value">{value}<span>{measure}</span></p>
       </div>
       {type === 'Wind Status' &&
-        <div className="wind-dir">wind-dir {res}</div>
+        <div className="wind-dir">
+          <DirectionSVG style={{ transform: `rotate(${res[1]}deg)`}}/>
+          {res[0]}  
+        </div>
       }
       {type === 'Humidity' &&
         <div className="prct-bar">prct-bar {value}</div>

@@ -19,4 +19,19 @@
       }
     }
   }
+
+  .wind-dir {
+    @include d-flex(row, 10px);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $white;
+      background-color: rgba($dark-grey, 0.5);
+      border-radius: 50%;
+    }
+  }
 }
