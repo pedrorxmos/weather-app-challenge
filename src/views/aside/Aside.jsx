@@ -53,6 +53,10 @@ export function Aside() {
           <Highlights type="Air Pressure" value={998} measure="mb"/>
         </div>
       </div>
+
+      <p className="copyrights">
+        created by <a href="https://github.com/pedrorxmos/weather-app-challenge" target="_blank">pedrorxmos</a> - devChallenges.io
+      </p>
     </main>
   )
 }

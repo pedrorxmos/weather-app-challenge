@@ -16,4 +16,16 @@
       @include d-flex(column, 2rem);
     }
   }
+
+  .copyrights {
+    font-size: 14px;
+    color: $light-grey;
+    text-align: center;
+    padding: $pd-s;
+
+    a {
+      color: inherit;
+      font-weight: 600;
+    }
+  }
 }
