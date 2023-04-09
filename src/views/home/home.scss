@@ -9,7 +9,7 @@
     @include d-flex(row, 0);
     justify-content: space-between;
     align-items: center;
-    padding: $pd-sm $pd-s 0;
+    padding: $pd-s $pd-xs 0;
   }
 
   .home__info {
