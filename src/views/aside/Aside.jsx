@@ -3,39 +3,7 @@ import { Highlights } from '../../components/highlights/Highlights';
 import './aside.scss';
 
 export function Aside({days, current}) {
-  const week = [
-    {
-      date: 'Tomorrow',
-      type: 'rain',
-      max: 16,
-      min: 11
-    },
-    {
-      date: 'Sun, 7 Jun',
-      type: 'fog',
-      max: 16,
-      min: 11
-    },
-    {
-      date: 'Mon, 8 Jun',
-      type: 'sleet',
-      max: 16,
-      min: 11
-    },
-    {
-      date: 'Tue, 9 Jun',
-      type: 'snow',
-      max: 16,
-      min: 11
-    },
-    {
-      date: 'Wed, 10 Jun',
-      type: 'wind',
-      max: 16,
-      min: 11
-    }
-  ];
- 
+  
   return(
     <aside className="aside">
       <div className="aside__week">
