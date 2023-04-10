@@ -2,7 +2,7 @@ import { DayComponent } from '../../components/day/DayComponent';
 import { Highlights } from '../../components/highlights/Highlights';
 import './aside.scss';
 
-export function Aside() {
+export function Aside({days, current}) {
   const week = [
     {
       date: 'Tomorrow',
@@ -35,12 +35,12 @@ export function Aside() {
       min: 11
     }
   ];
-
+ 
   return(
-    <main className="aside">
+    <aside className="aside">
       <div className="aside__week">
-        {week.map((day) => (
-          <DayComponent date={day.date} type={day.type} max={day.max} min={day.min}/>
+        {days.slice(1, 6).map((day, index) => (
+          <DayComponent date={(index > 0 ) ? day.datetime : 'Tomorrow'} type={day.icon} max={day.tempmax} min={day.tempmin}/>
         ))}
         
       </div>
@@ -57,6 +57,6 @@ export function Aside() {
       <p className="copyrights">
         created by <a href="https://github.com/pedrorxmos/weather-app-challenge" target="_blank">pedrorxmos</a> - devChallenges.io
       </p>
-    </main>
+    </aside>
   )
 }

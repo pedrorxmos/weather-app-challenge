@@ -16,17 +16,16 @@ function App() {
   }
 
   useEffect(() => {
-    fetchWeatherData('jumilla')
+    fetchWeatherData('valencia')
   }, [])
   
-  const cityName = weather.resolvedAddress.split(',')[0];
   return (
     <>
       {
         weather && 
         <main>
-          <Home location={cityName} weather={weather.currentConditions} />
-          <Aside />
+          <Home location={weather.resolvedAddress.split(',')[0]} weather={weather.currentConditions} />
+          <Aside days={weather.days} current={weather.currentConditions} />
         </main>
       }
       

@@ -1,16 +1,17 @@
 import './home.scss';
 import { LocationSVG, PinSVG } from '../../assets/icons';
 import { Banner } from '../../components/home/Banner';
+import { transformDate } from '../../hooks/date';
 
 export function Home({location, weather}) {
 
-  const date = new Date();
-  const num = date.getDate();
-  const month = date.getMonth();
-  const day = date.getDay();
+  // const date = new Date();
+  // const num = date.getDate();
+  // const month = date.getMonth();
+  // const day = date.getDay();
 
-  const year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', ' Thursday', 'Friday', 'Saturday'];
+  // const year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  // const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', ' Thursday', 'Friday', 'Saturday'];
 
   return(
     <header className="home">
@@ -30,7 +31,7 @@ export function Home({location, weather}) {
         <div className="info-date">
           <p>Today</p>
           <span className="dot"></span>
-          <p>{week[day].slice(0, 3)}. {num} {year[month].slice(0, 3)}</p>
+          <p>{transformDate('')}</p>
         </div>
         <div className="info-city">
           <PinSVG/>
