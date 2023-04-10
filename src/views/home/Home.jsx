@@ -2,7 +2,16 @@ import './home.scss';
 import { LocationSVG, PinSVG } from '../../assets/icons';
 import { Banner } from '../../components/home/Banner';
 
-export function Home() {
+export function Home({location, weather}) {
+
+  const date = new Date();
+  const num = date.getDate();
+  const month = date.getMonth();
+  const day = date.getDay();
+
+  const year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', ' Thursday', 'Friday', 'Saturday'];
+
   return(
     <header className="home">
       <nav className="home__actions">
@@ -14,18 +23,18 @@ export function Home() {
           <LocationSVG/>
         </button>
       </nav>
-      <Banner type={"cloudy"}/>
+      <Banner type={weather.icon}/>
       <div className="home__info">
-        <p className="info-deg">15<span>ºC</span></p>
-        <p className="info-type">Thunderstorm</p>
+        <p className="info-deg">{Math.round(weather.temp)}<span>ºC</span></p>
+        <p className="info-type">{weather.conditions}</p>
         <div className="info-date">
           <p>Today</p>
           <span className="dot"></span>
-          <p>Fri. 5 Jun</p>
+          <p>{week[day].slice(0, 3)}. {num} {year[month].slice(0, 3)}</p>
         </div>
         <div className="info-city">
           <PinSVG/>
-          <p>Helsinki</p>
+          <p>{location}</p>
         </div>
       </div>
     </header>
