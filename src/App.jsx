@@ -16,7 +16,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetchWeatherData('valencia')
+    fetchWeatherData('jumilla')
   }, [])
   
   return (
