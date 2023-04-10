@@ -6,31 +6,31 @@ export function Aside() {
   const week = [
     {
       date: 'Tomorrow',
-      type: 'Shower',
+      type: 'rain',
       max: 16,
       min: 11
     },
     {
       date: 'Sun, 7 Jun',
-      type: 'Shower',
+      type: 'fog',
       max: 16,
       min: 11
     },
     {
       date: 'Mon, 8 Jun',
-      type: 'Shower',
+      type: 'sleet',
       max: 16,
       min: 11
     },
     {
       date: 'Tue, 9 Jun',
-      type: 'Shower',
+      type: 'snow',
       max: 16,
       min: 11
     },
     {
       date: 'Wed, 10 Jun',
-      type: 'Shower',
+      type: 'wind',
       max: 16,
       min: 11
     }

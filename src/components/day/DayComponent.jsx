@@ -6,7 +6,7 @@ export function DayComponent({date, type, max, min}) {
     <div className="day-card">
       <div className="day__group">
         <p>{date}</p>
-        <img src={`/src/assets/img/${type}.webp`} alt={`${date} weather`} />
+        <img src={`/src/assets/img/${type}.svg`} alt={`${date} weather`} />
       </div>
       <div className="day__maxmin">
         <p>{max}<span>ºC</span></p>

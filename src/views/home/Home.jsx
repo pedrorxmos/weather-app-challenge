@@ -14,7 +14,7 @@ export function Home() {
           <LocationSVG/>
         </button>
       </nav>
-      <Banner type={"Thunderstorm"}/>
+      <Banner type={"cloudy"}/>
       <div className="home__info">
         <p className="info-deg">15<span>ºC</span></p>
         <p className="info-type">Thunderstorm</p>
