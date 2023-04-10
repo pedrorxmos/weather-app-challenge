@@ -4,7 +4,7 @@ export function Banner({type}) {
 
   return(
     <div className="banner">
-      <img src={`/src/assets/img/${type}.webp`} alt="Actual weather" />
+      <img src={`/src/assets/img/${type}.svg`} alt="Actual weather" />
     </div>
   )
 }
