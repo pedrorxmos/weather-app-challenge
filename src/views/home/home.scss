@@ -5,6 +5,10 @@
   padding-bottom: 4rem;
   background: $blue;
 
+  @include mq(min-width, 700px) {
+    width: 31vw;
+  }
+
   .home__actions {
     @include d-flex(row, 0);
     justify-content: space-between;
@@ -22,8 +26,16 @@
       letter-spacing: 50%;
       margin-top: -1.5rem;
 
+      @include mq(min-width, 700px) {
+        font-size: 110px;
+      }
+
+      @include mq(min-width, 1024px) {
+        font-size: 144px;
+      }
+
       span {
-        font-size: 48px;
+        font-size: 0.333333em;
         line-height: 56.35px;
         color: $light-grey;
       }
@@ -33,6 +45,15 @@
       color: $light-grey;
       font-size: 36px;
       font-weight: 600;
+
+      @include mq(min-width, 700px) {
+        font-size: 24px;
+      }
+
+      @include mq(min-width, 1024px) {
+        font-size: 36px;
+      }
+
     }
 
     .info-date {
