@@ -5,7 +5,7 @@
 };
 
 @mixin mq($direction: min-width, $size: 1024px) {
-  @media scree and ($direction: $size) {
+  @media screen and ($direction: $size) {
     @content;
   }
 }
