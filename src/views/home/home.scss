@@ -28,6 +28,10 @@
     @include d-flex(column, 2rem);
     align-items: center;
 
+    @include mq(min-width, 700px) {
+      gap: 1rem;
+    }
+
     .info-deg {
       font-size: 144px;
       line-height: 169.06px;
@@ -39,7 +43,7 @@
       }
 
       @include mq(min-width, 1024px) {
-        font-size: 144px;
+        font-size: 124px;
       }
 
       span {
@@ -59,7 +63,7 @@
       }
 
       @include mq(min-width, 1024px) {
-        font-size: 36px;
+        font-size: 30px;
       }
 
     }
@@ -72,6 +76,10 @@
       p {
         font-size: 18px;
         color: $light-grey;
+
+        @include mq(min-width, 700px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -81,6 +89,10 @@
       justify-content: center;
       color: $light-grey;
       font-size: 18px;
+
+      @include mq(min-width, 700px) {
+        font-size: 16px;
+      }
 
       svg {
         width: 18px;
