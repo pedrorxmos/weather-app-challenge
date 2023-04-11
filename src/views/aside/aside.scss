@@ -1,19 +1,69 @@
 @import '../../scss/exports';
 
 .aside {
+  width: 100%;
+
+  @include mq(min-width, 700px) {
+    width: calc(100% - 31vw);
+  }
+
   .aside__week {
     padding: $pd-xl;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
+
+    @include mq(min-width, 500px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.666667rem;
+    }
+
+    @include mq(min-width, 700px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mq(min-width, 1024px) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 1.75rem;
+    }
+
+    @include mq(min-width, 1200px) {
+      padding-left: 124px;
+      padding-right: 124px;
+    }
+
+    @include mq(min-width, 1300px) {
+      padding-left: 140px;
+      padding-right: 140px;
+    }
   }
 
   .aside__highlitghts {
     padding: 0 $pd-sm $pd-xl;
     @include d-flex(column, 2rem);
 
+    @include mq(min-width, 700px) {
+      padding: 0 $pd-xl $pd-xl;
+    }
+
+    @include mq(min-width, 1200px) {
+      padding-left: 124px;
+      padding-right: 124px;
+    }
+
+    @include mq(min-width, 1300px) {
+      padding-left: 140px;
+      padding-right: 140px;
+    }
+
     .hl-list {
       @include d-flex(column, 2rem);
+
+      @include mq(min-width, 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+      }
     }
   }
 

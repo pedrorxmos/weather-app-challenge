@@ -10,10 +10,6 @@
   @include mq(min-width, 700px) {
     font-size: 14px;
   }
-
-  @include mq(min-width, 1024px) {
-    font-size: 1rem;
-  }
 }
 
 .btn-round {
