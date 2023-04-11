@@ -9,6 +9,10 @@
   @include mq(min-width, 500px) {
     aspect-ratio: 1 / .775;
   }
+
+  @include mq(min-width, 1024px) {
+    aspect-ratio: 1 / .666667;
+  }
   position: relative;
 
   &:before {
