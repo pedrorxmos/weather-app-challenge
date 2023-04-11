@@ -13,4 +13,8 @@ body {
 main {
   @include d-flex(column, 0);
   width: 100%;
+
+  @include mq(min-width, 700px) {
+    flex-direction: row;
+  }
 }

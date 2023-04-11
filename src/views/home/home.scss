@@ -5,16 +5,32 @@
   padding-bottom: 4rem;
   background: $blue;
 
+  @include mq(min-width, 700px) {
+    width: 31vw;
+  }
+
   .home__actions {
     @include d-flex(row, 0);
     justify-content: space-between;
     align-items: center;
     padding: $pd-s $pd-xs 0;
+
+    @include mq(min-width, 875px) {
+      padding: $pd-sm $pd-sm 0;
+    }
+
+    @include mq(min-width, 1024px) {
+      padding: $pd-m $pd-m 0;
+    }
   }
 
   .home__info {
     @include d-flex(column, 2rem);
     align-items: center;
+
+    @include mq(min-width, 700px) {
+      gap: 1rem;
+    }
 
     .info-deg {
       font-size: 144px;
@@ -22,8 +38,16 @@
       letter-spacing: 50%;
       margin-top: -1.5rem;
 
+      @include mq(min-width, 700px) {
+        font-size: 110px;
+      }
+
+      @include mq(min-width, 1024px) {
+        font-size: 124px;
+      }
+
       span {
-        font-size: 48px;
+        font-size: 0.333333em;
         line-height: 56.35px;
         color: $light-grey;
       }
@@ -33,6 +57,15 @@
       color: $light-grey;
       font-size: 36px;
       font-weight: 600;
+
+      @include mq(min-width, 700px) {
+        font-size: 24px;
+      }
+
+      @include mq(min-width, 1024px) {
+        font-size: 30px;
+      }
+
     }
 
     .info-date {
@@ -43,6 +76,10 @@
       p {
         font-size: 18px;
         color: $light-grey;
+
+        @include mq(min-width, 700px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -52,6 +89,10 @@
       justify-content: center;
       color: $light-grey;
       font-size: 18px;
+
+      @include mq(min-width, 700px) {
+        font-size: 16px;
+      }
 
       svg {
         width: 18px;
