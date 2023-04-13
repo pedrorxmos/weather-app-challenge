@@ -3,15 +3,34 @@ import { LocationSVG, PinSVG } from '../../assets/icons';
 import { Banner } from '../../components/home/Banner';
 import { transformDate } from '../../hooks/date';
 
-export function Home({location, weather}) {
+const key = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
-  // const date = new Date();
-  // const num = date.getDate();
-  // const month = date.getMonth();
-  // const day = date.getDay();
+export function Home({location, weather, changeCity}) {
 
-  // const year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  // const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', ' Thursday', 'Friday', 'Saturday'];
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCity);
+    } else { 
+     console.log("Geolocation is not supported by this browser.");
+    }
+  }
+
+  const getCity = (position) => {
+    const request = new XMLHttpRequest();
+    request.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&sensor=true&key=${key}`);
+    //request.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
+    request.responseType = 'json';
+    request.send();
+    request.onload = function () {
+      request.response.results.forEach(result => {
+        if(result.types[0] === "administrative_area_level_4") {
+          changeCity(result.formatted_address.split(',')[0])
+        }
+        
+      })
+    }
+  }
+
 
   return(
     <header className="home">
@@ -20,7 +39,7 @@ export function Home({location, weather}) {
           Search for places
         </button>
 
-        <button className="btn btn-round btn-icon">
+        <button className="btn btn-round btn-icon" onClick={getLocation}>
           <LocationSVG/>
         </button>
       </nav>
