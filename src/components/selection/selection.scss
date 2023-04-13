@@ -68,6 +68,7 @@
     @include d-flex(column, 1rem);
 
     .btn-location {
+      text-transform: capitalize;
       background: none;
       color: $white;
       padding: 1rem;
