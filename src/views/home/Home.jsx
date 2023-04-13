@@ -2,6 +2,7 @@ import './home.scss';
 import { LocationSVG, PinSVG } from '../../assets/icons';
 import { Banner } from '../../components/home/Banner';
 import { transformDate } from '../../hooks/date';
+import { Selection } from '../../components/selection/Selection';
 
 const key = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
@@ -57,6 +58,8 @@ export function Home({location, weather, changeCity}) {
           <p>{location}</p>
         </div>
       </div>
+
+      <Selection/>
     </header>
   )
 }

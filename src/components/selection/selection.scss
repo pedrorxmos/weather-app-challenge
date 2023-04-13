@@ -1,0 +1,11 @@
+@import '../../scss/exports';
+
+.selection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $blue;
+  height: 100vh;
+  padding: $pd-xs;
+}
