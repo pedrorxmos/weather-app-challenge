@@ -20,11 +20,13 @@ export function Selection() {
       <div className="selection__actions">
         <button><CloseSVG/></button>
       </div>
-      <form action={addLocation}>
-        <div className="field field__icon">
+      <form action={addLocation} className='field-group'>
+        <label className="field field__icon" for="location">
           <SearchSVG/>
           <input type="text" name="location" id="location" />
-        </div>
+        </label>
+
+        <button type="submit" className="btn btn-secondary">Search</button>
       </form>
 
       <div className="location__selection">
