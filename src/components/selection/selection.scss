@@ -3,14 +3,18 @@
 .selection {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -100%;
+  width: 100%;
   background: $blue;
   height: 100vh;
   padding: $pd-xs;
   @include d-flex(column, 1rem);
-  container-type: inline-size;
-  container-name: selection;
+  transition: left .3s;
+  z-index: 20;
+
+  &.open {
+    left: 0;
+  }
 
   .selection__actions {
     @include d-flex(row, 0);
@@ -80,6 +84,21 @@
         font-size: 14px;
       }
     }
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba($dark-blue, 0.7);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &.open {
+    display: block;
   }
 }
 

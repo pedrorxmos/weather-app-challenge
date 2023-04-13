@@ -32,11 +32,16 @@ export function Home({location, weather, changeCity}) {
     }
   }
 
+  const openNav = () => {
+    document.querySelector('.selection').classList.add('open');
+    document.querySelector('.overlay').classList.add('open');
+  }
+
 
   return(
     <header className="home">
       <nav className="home__actions">
-        <button className="btn action__search">
+        <button className="btn action__search" onClick={openNav}>
           Search for places
         </button>
 
