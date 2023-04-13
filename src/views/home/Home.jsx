@@ -6,7 +6,7 @@ import { Selection } from '../../components/selection/Selection';
 
 const key = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
-export function Home({location, weather, changeCity}) {
+export function Home({location, weather, changeCity, locations, updateLocations}) {
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -64,7 +64,7 @@ export function Home({location, weather, changeCity}) {
         </div>
       </div>
 
-      <Selection/>
+      <Selection locations={locations} updateLocations={updateLocations}/>
     </header>
   )
 }
