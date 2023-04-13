@@ -9,6 +9,8 @@
   height: 100vh;
   padding: $pd-xs;
   @include d-flex(column, 1rem);
+  container-type: inline-size;
+  container-name: selection;
 
   .selection__actions {
     @include d-flex(row, 0);
@@ -28,6 +30,36 @@
     }
   }
 
+  .field-group {
+    @include mq(min-width, 700px) {
+      flex-direction: column;
+
+      .field, .field-btn{
+        width: 100%;
+      }
+    }
+
+    @include mq(min-width, 700px) {
+      flex-direction: column;
+
+      .field, .field-btn{
+        width: 100%;
+      }
+    }
+
+    @include mq(min-width, 950px) {
+      flex-direction: unset;
+
+      .field {
+        width: 70%;
+      }
+    
+      .field-btn {
+        width: 30%;
+      }
+    }
+
+  }
   .selection__buttons {
     @include d-flex(column, 1rem);
 
@@ -50,3 +82,4 @@
     }
   }
 }
+
