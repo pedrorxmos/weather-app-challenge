@@ -2,10 +2,11 @@ import './home.scss';
 import { LocationSVG, PinSVG } from '../../assets/icons';
 import { Banner } from '../../components/home/Banner';
 import { transformDate } from '../../hooks/date';
+import { Selection } from '../../components/selection/Selection';
 
 const key = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
-export function Home({location, weather, changeCity}) {
+export function Home({location, weather, changeCity, locations, updateLocations}) {
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -31,11 +32,16 @@ export function Home({location, weather, changeCity}) {
     }
   }
 
+  const openNav = () => {
+    document.querySelector('.selection').classList.add('open');
+    document.querySelector('.overlay').classList.add('open');
+  }
+
 
   return(
     <header className="home">
       <nav className="home__actions">
-        <button className="btn action__search">
+        <button className="btn action__search" onClick={openNav}>
           Search for places
         </button>
 
@@ -57,6 +63,8 @@ export function Home({location, weather, changeCity}) {
           <p>{location}</p>
         </div>
       </div>
+
+      <Selection locations={locations} updateLocations={updateLocations} changeCity={changeCity}/>
     </header>
   )
 }

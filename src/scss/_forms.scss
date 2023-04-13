@@ -1,0 +1,38 @@
+.field-group {
+  @include d-flex(row, 1rem);
+  justify-content: stretch;
+
+  .field {
+    width: 70%;
+  }
+
+  .field-btn {
+    width: 30%;
+  }
+}
+
+.field {
+  border: 1px solid $white;
+  padding: 15px;
+
+  input {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-family: $font-family;
+    width: 100%;
+  }
+
+  &.field__icon {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1rem;
+
+    svg {
+      fill: $light-grey;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

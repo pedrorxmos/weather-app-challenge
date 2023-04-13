@@ -1,0 +1,105 @@
+@import '../../scss/exports';
+
+.selection {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  background: $blue;
+  height: 100vh;
+  padding: $pd-xs;
+  @include d-flex(column, 1rem);
+  transition: left .3s;
+  z-index: 20;
+
+  &.open {
+    left: 0;
+  }
+
+  .selection__actions {
+    @include d-flex(row, 0);
+    justify-content: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      color: $white;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $white;
+      }
+    }
+  }
+
+  .field-group {
+    @include mq(min-width, 700px) {
+      flex-direction: column;
+
+      .field, .field-btn{
+        width: 100%;
+      }
+    }
+
+    @include mq(min-width, 700px) {
+      flex-direction: column;
+
+      .field, .field-btn{
+        width: 100%;
+      }
+    }
+
+    @include mq(min-width, 950px) {
+      flex-direction: unset;
+
+      .field {
+        width: 70%;
+      }
+    
+      .field-btn {
+        width: 30%;
+      }
+    }
+
+  }
+  .selection__buttons {
+    @include d-flex(column, 1rem);
+
+    .btn-location {
+      text-transform: capitalize;
+      background: none;
+      color: $white;
+      padding: 1rem;
+      font-family: $font-family;
+      font-size: 1rem;
+      border: 1px solid transparent;
+      text-align: left;
+
+      &:hover {
+        border-color: $white;
+      }
+    
+      @include mq(min-width, 700px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba($dark-blue, 0.7);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &.open {
+    display: block;
+  }
+}
+
