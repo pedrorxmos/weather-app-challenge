@@ -64,7 +64,7 @@ export function Home({location, weather, changeCity, locations, updateLocations}
         </div>
       </div>
 
-      <Selection locations={locations} updateLocations={updateLocations}/>
+      <Selection locations={locations} updateLocations={updateLocations} changeCity={changeCity}/>
     </header>
   )
 }

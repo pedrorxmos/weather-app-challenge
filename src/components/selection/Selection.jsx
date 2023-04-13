@@ -2,7 +2,7 @@ import './selection.scss';
 import { CloseSVG, SearchSVG } from '../../assets/icons';
 import { LocationButton } from './LocationButton';
 
-export function Selection({locations, updateLocations}) {
+export function Selection({locations, updateLocations, changeCity}) {
 
   const closeNav = () => {
     document.querySelector('.selection').classList.remove('open');
@@ -13,11 +13,14 @@ export function Selection({locations, updateLocations}) {
     event.preventDefault();
     const value = event.target.location.value;
     
-    if(!locations.includes(value.toLowerCase()) && value !== '')
-      updateLocations([...locations, value]);
-  }
+    if(!locations.includes(value.toLowerCase()) & value !== ''){
+      updateLocations([...locations, value.toLowerCase()]);
+    }
 
-  console.log('selection-->', locations);
+    event.target.reset();
+    changeCity(value);
+    closeNav();
+  }
 
   return(
     <>
@@ -37,7 +40,7 @@ export function Selection({locations, updateLocations}) {
         <div className="selection__buttons">
 
           {locations.map((l, index) => (
-            <LocationButton key={index} location={l}/>
+            <LocationButton key={index} location={l} changeCity={changeCity} />
           ))}
         </div>
       </nav>
