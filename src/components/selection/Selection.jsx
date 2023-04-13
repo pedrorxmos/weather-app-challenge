@@ -22,6 +22,12 @@ export function Selection({locations, updateLocations, changeCity}) {
     closeNav();
   }
 
+  const updateCity = (city) => {
+    document.querySelector('form').reset();
+    changeCity(city);
+    closeNav();
+  }
+
   return(
     <>
       <nav className="selection">
@@ -40,7 +46,7 @@ export function Selection({locations, updateLocations, changeCity}) {
         <div className="selection__buttons">
 
           {locations.map((l, index) => (
-            <LocationButton key={index} location={l} changeCity={changeCity} />
+            <LocationButton key={index} location={l} updateCity={updateCity} />
           ))}
         </div>
       </nav>
