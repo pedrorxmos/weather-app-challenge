@@ -7,7 +7,7 @@ export function DayComponent({date, type, max, min}) {
     <div className="day-card">
       <div className="day__group">
         <p>{(date !== 'Tomorrow') ? transformDate(date) : date}</p>
-        <img src={`/src/assets/img/${type}.svg`} alt={`${date} weather`} />
+        <img src={new URL(`/src/assets/img/${type}.svg`, import.meta.url)} alt={`${date} weather`} />
       </div>
       <div className="day__maxmin">
         <p>{Math.round(max)}<span>ºC</span></p>
