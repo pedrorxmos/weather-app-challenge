@@ -1,5 +1,6 @@
 import './selection.scss';
 import { CloseSVG, SearchSVG } from '../../assets/icons';
+import { LocationButton } from './LocationButton';
 
 export function Selection() {
 
@@ -29,8 +30,9 @@ export function Selection() {
         <button type="submit" className="btn btn-secondary field-btn">Search</button>
       </form>
 
-      <div className="location__selection">
-        <button className="btn-location">Location</button>
+      <div className="selection__buttons">
+        <LocationButton location={'Location'}/>
+        <LocationButton location={'Location 2'}/>
       </div>
     </nav>
   )

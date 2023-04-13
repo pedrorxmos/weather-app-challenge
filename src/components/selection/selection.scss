@@ -8,6 +8,7 @@
   background: $blue;
   height: 100vh;
   padding: $pd-xs;
+  @include d-flex(column, 1rem);
 
   .selection__actions {
     @include d-flex(row, 0);
@@ -23,6 +24,28 @@
         width: 2rem;
         height: 2rem;
         fill: $white;
+      }
+    }
+  }
+
+  .selection__buttons {
+    @include d-flex(column, 1rem);
+
+    .btn-location {
+      background: none;
+      color: $white;
+      padding: 1rem;
+      font-family: $font-family;
+      font-size: 1rem;
+      border: 1px solid transparent;
+      text-align: left;
+
+      &:hover {
+        border-color: $white;
+      }
+    
+      @include mq(min-width, 700px) {
+        font-size: 14px;
       }
     }
   }
