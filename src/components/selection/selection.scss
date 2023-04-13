@@ -8,4 +8,22 @@
   background: $blue;
   height: 100vh;
   padding: $pd-xs;
+
+  .selection__actions {
+    @include d-flex(row, 0);
+    justify-content: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      color: $white;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $white;
+      }
+    }
+  }
 }
