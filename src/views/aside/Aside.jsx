@@ -3,9 +3,17 @@ import { Highlights } from '../../components/highlights/Highlights';
 import './aside.scss';
 
 export function Aside({days, current}) {
+
+  const changeUnit = (e) => {
+    console.log(e.target.getAttribute('data-unit'));
+  }
   
   return(
     <aside className="aside">
+      <div className="aside__actions">
+        <button data-unit="metric" onClick={changeUnit}>ºC</button>
+        <button data-unit="us" onClick={changeUnit}>ºF</button>
+      </div>
       <div className="aside__week">
         {days.slice(1, 6).map((day, index) => (
           <DayComponent date={(index > 0 ) ? day.datetime : 'Tomorrow'} type={day.icon} max={day.tempmax} min={day.tempmin}/>
