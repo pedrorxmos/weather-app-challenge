@@ -11,25 +11,23 @@ function App() {
   const [locations, setLocations] = useState(getValues(locationsLSKey));
   const [unit, setUnit] = useState((getValues(unitLSKey).length === 0) ? 'metric' : getValues(unitLSKey));
 
-  const fetchWeatherData = (city) => {
-    console.log('fetch1', unit);
-    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=${unit}&key=LAACAY8XZPGVCRMSAQ93MC8UZ&contentType=json`)
+  const fetchWeatherData = (city, unitGroup) => {
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=${unitGroup}&key=LAACAY8XZPGVCRMSAQ93MC8UZ&contentType=json`)
       .then(response => {
         return response.json()
       })
       .then(data => {
-        console.log('fetch2', unit);
         setWeather(data)
       })
   }
 
   useEffect(() => {
-    fetchCurrent();
+    fetchCurrent(unit);
   }, [])
 
-  const fetchCurrent = () => {
+  const fetchCurrent = (unitGroup) => {
     const current = (getValues(currentLSKey).length === 0) ? 'valencia' : getValues(currentLSKey);
-    fetchWeatherData(current)
+    fetchWeatherData(current, unitGroup)
   }
 
   const changeCity = (city) => {
@@ -43,11 +41,9 @@ function App() {
   }
 
   const updateUnit = (val) => {
-    setUnit(val);
     updateValues(unitLSKey, val);
-    console.log('unit 1', unit);
-    fetchCurrent();
-    console.log('unit 2', unit);
+    fetchCurrent(val);
+    setUnit(val);
   }
   
   return (
