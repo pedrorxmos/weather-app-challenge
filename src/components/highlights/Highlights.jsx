@@ -49,5 +49,3 @@ export function Highlights({type, value, measure, res}) {
     </div>
   )
 }
-
-//http://api.weatherapi.com/v1/forecast.json?key=bd802df2bdd042d1a42211235232603&q=Valencia&days=6&aqi=no&alerts=no

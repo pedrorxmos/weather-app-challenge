@@ -23,7 +23,7 @@ export function Home({location, weather, changeCity, locations, updateLocations,
   const getCity = (position) => {
     const request = new XMLHttpRequest();
     request.open('GET', `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&sensor=true&key=${key}`);
-    //request.setRequestHeader('Content-type', "application/x-www-form-urlencoded; charset=utf-8");
+
     request.responseType = 'json';
     request.send();
     request.onload = function () {

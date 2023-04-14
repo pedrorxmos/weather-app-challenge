@@ -5,8 +5,7 @@ import './aside.scss';
 export function Aside({days, current, unit, updateUnit}) {
 
   const changeUnit = (e) => {
-    console.log(e.target.getAttribute('data-unit'));
-    updateUnit(e.target.getAttribute('data-unit'))
+    updateUnit(e.target.getAttribute('data-unit'));
   }
 
   const units = {
