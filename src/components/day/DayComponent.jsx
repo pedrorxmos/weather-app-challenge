@@ -1,7 +1,12 @@
 import { transformDate } from '../../hooks/date';
 import './daycomponent.scss';
 
-export function DayComponent({date, type, max, min}) {
+export function DayComponent({date, type, max, min, unit}) {
+
+  const units = {
+    metric: 'C',
+    us: 'F'
+  }
 
   return(
     <div className="day-card">
@@ -10,8 +15,8 @@ export function DayComponent({date, type, max, min}) {
         <img src={new URL(`/src/assets/img/${type}.svg`, import.meta.url)} alt={`${date} weather`} />
       </div>
       <div className="day__maxmin">
-        <p>{Math.round(max)}<span>ºC</span></p>
-        <p>{Math.round(min)}<span>ºC</span></p>
+        <p>{Math.round(max)}<span>º{units[unit]}</span></p>
+        <p>{Math.round(min)}<span>º{units[unit]}</span></p>
       </div>
     </div>
   )
