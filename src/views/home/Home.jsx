@@ -6,8 +6,12 @@ import { Selection } from '../../components/selection/Selection';
 
 const key = import.meta.env.VITE_APP_WEATHER_API_KEY;
 
-export function Home({location, weather, changeCity, locations, updateLocations}) {
+export function Home({location, weather, changeCity, locations, updateLocations, unit}) {
 
+  const units = {
+    metric: 'C',
+    us: 'F'
+  }
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(getCity);
@@ -51,7 +55,7 @@ export function Home({location, weather, changeCity, locations, updateLocations}
       </nav>
       <Banner type={weather.icon}/>
       <div className="home__info">
-        <p className="info-deg">{Math.round(weather.temp)}<span>ºC</span></p>
+        <p className="info-deg">{Math.round(weather.temp)}<span>º{units[unit]}</span></p>
         <p className="info-type">{weather.conditions}</p>
         <div className="info-date">
           <p>Today</p>
