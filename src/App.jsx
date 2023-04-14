@@ -31,7 +31,7 @@ function App() {
   }
 
   const changeCity = (city) => {
-    fetchWeatherData(city);
+    fetchWeatherData(city, unit);
     updateValues(currentLSKey, city)
   }
 
