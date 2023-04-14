@@ -41,7 +41,7 @@ function App() {
         weather && 
         <main>
           <Home location={weather.resolvedAddress.split(',')[0]} weather={weather.currentConditions} changeCity={changeCity} locations={locations} updateLocations={updateLocations}/>
-          <Aside days={weather.days} current={weather.currentConditions} />
+          <Aside days={weather.days} current={weather.currentConditions} unit={'metric'}/>
         </main>
       }
       

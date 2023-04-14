@@ -2,7 +2,7 @@ import { DayComponent } from '../../components/day/DayComponent';
 import { Highlights } from '../../components/highlights/Highlights';
 import './aside.scss';
 
-export function Aside({days, current}) {
+export function Aside({days, current, unit}) {
 
   const changeUnit = (e) => {
     console.log(e.target.getAttribute('data-unit'));
@@ -11,8 +11,8 @@ export function Aside({days, current}) {
   return(
     <aside className="aside">
       <div className="aside__actions">
-        <button data-unit="metric" onClick={changeUnit}>ºC</button>
-        <button data-unit="us" onClick={changeUnit}>ºF</button>
+        <button data-unit="metric" className={(unit === 'metric') ? 'btn btn-round active' : 'btn btn-round'} onClick={changeUnit}>ºC</button>
+        <button data-unit="us" className={(unit === 'us') ? 'btn btn-round active' : 'btn btn-round'} onClick={changeUnit}>ºF</button>
       </div>
       <div className="aside__week">
         {days.slice(1, 6).map((day, index) => (

@@ -7,8 +7,35 @@
     width: calc(100% - 31vw);
   }
 
+  .aside__actions {
+    padding: $pd-s $pd-xl $pd-sm;
+    @include d-flex(row, 1rem);
+    justify-content: flex-end;
+
+    @include mq(min-width, 1200px) {
+      padding-left: 124px;
+      padding-right: 124px;
+    }
+
+    @include mq(min-width, 1300px) {
+      padding-left: 140px;
+      padding-right: 140px;
+    }
+
+    .btn {
+      aspect-ratio: 1 / 1;
+      padding: 12px;
+      font-weight: 600;
+
+      &.active {
+        background: $white;
+        color: $dark-blue;
+      }
+    }
+  }
+
   .aside__week {
-    padding: $pd-xl;
+    padding: 0 $pd-xl $pd-xl;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
