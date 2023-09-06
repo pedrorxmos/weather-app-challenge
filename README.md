@@ -1,17 +1,25 @@
-<h1 align="center">Weather App</h1>
-<div align="center">
-   Solution for a challenge from  <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv" target="_blank">Devchallenges.io</a>.
-</div>
+ <div align="center" valign="center">
+  <h1 valign="center"> 
+    <img src="./public/favicon-16x16.png" alt="icon"/>
+    Weather App
+    <img src="./public/favicon-16x16.png" alt="icon"/>
+  </h1> 
+  Solution for a challenge from  <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv" target="_blank">devchallenges.io</a>. Coded with ♥ by Pedro Ramos
+  <br><br>
 
+  [![React](https://img.shields.io/badge/React-f7f7f7?style=for-the-badge&logo=react)](https://es.react.dev/)
+  [![Vite](https://img.shields.io/badge/Vite-f7f7f7?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+  [![Scss](https://img.shields.io/badge/Scss-f7f7f7?style=for-the-badge&logo=sass)](https://sass-lang.com/)
+
+</div>
 <br>
 
-### Built With
+## Preview
 
-- [Vite + React](https://vitejs.dev/)
-- [Sass (scss)](https://sass-lang.com/)
+![Preview](./public/preview.webp)
 
 
-## How To Use
+## Installation
 
 <!-- Example: -->
 
@@ -28,7 +36,17 @@ $ npm install
 $ npm start
 ```
 
-## Contact
+## Deployment
 
-- GitHub [@pedrorxmos](https://github.com/pedrorxmos)
-- LinkedIn [@pedroaramosguardiola](https://www.linkedin.com/in/pedroaramosguardiola/)
+To deploy this applicattion, you have to use:
+
+```bash
+$ npm run build
+```
+
+## My Links
+- Portfolio: [pedrorxmos.com](https://pedrorxmos.com)
+- Github: [@pedrorxmos](https://github.com/pedrorxmos)
+- LinkedIn: [@pedroramosguardiola](https://linkedin.com/in/pedroramosguardiola)
+- Twitter: [@pedrorxmos](https://twitter.com/pedrorxmos)
+- Mail: [pedrorxmosdev@gmail.com](mailTo:pedrorxmosdev@gmail.com)
